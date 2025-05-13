@@ -160,11 +160,11 @@ class ProjectTests(unittest.TestCase):
                 ordered_calls.append(line.strip().split(','))
 
         # Assert that the userId in the first record in ordered_calls is 1
-        self.assertEqual(1, int(ordered_calls[0][5]))
+        self.assertEqual(1, int(ordered_calls[0][0]))
         # Assert that the userId in the fifth record is 2
-        self.assertEqual(2, int(ordered_calls[4][5]))
+        self.assertEqual(2, int(ordered_calls[4][0]))
         # Assert that the userId in the last record is 4
-        self.assertEqual(4, int(ordered_calls[-1][5]))
+        self.assertEqual(4, int(ordered_calls[-1][0]))
 
         # Assert that startTime in the first record is < the startTime in the second record
         self.assertTrue(int(ordered_calls[0][2]) < int(ordered_calls[1][2]))
